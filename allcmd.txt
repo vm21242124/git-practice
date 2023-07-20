@@ -1,0 +1,415 @@
+[200~
+vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie
+$ git init
+Initialized empty Git repository in C:/Users/vinod mali/Desktop/git practie/.git/
+
+vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+$ git remote add origin https://github.com/vm21242124/git-practice.git
+
+vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+$ vi vinod.txt
+
+vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+$ ls
+vinod.txt
+
+vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+          vinod.txt
+
+	  nothing added to commit but untracked files present (use "git add" to track)
+
+	  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+	  $ git diff
+
+	  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+	  $ git add.
+	  git: 'add.' is not a git command. See 'git --help'.
+
+	  The most similar command is
+	          add
+
+		  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		  $ git add .
+		  warning: in the working copy of 'vinod.txt', LF will be replaced by CRLF the next time Git touches it
+
+		  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		  $ git commit -m "first"
+		  [master (root-commit) 5f1926b] first
+		   1 file changed, 2 insertions(+)
+		    create mode 100644 vinod.txt
+
+		    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		    $ git diff
+
+		    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		    $ vi vinod.txt
+
+		    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		    $ git diff vinod.txt
+		    warning: in the working copy of 'vinod.txt', LF will be replaced by CRLF the next time Git touches it
+		    diff --git a/vinod.txt b/vinod.txt
+		    index ec9b4b1..ed25bba 100644
+		    --- a/vinod.txt
+		    +++ b/vinod.txt
+		    @@ -1,2 +1,2 @@
+		     this is for master branch
+		     -
+		     +the diff is used to check the changes in staging area
+
+		     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+		     $ git commit
+		     On branch master
+		     Changes not staged for commit:
+		       (use "git add <file>..." to update what will be committed)
+		         (use "git restore <file>..." to discard changes in working directory)
+			         modified:   vinod.txt
+
+				 no changes added to commit (use "git add" and/or "git commit -a")
+
+				 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+				 $ git add .
+				 warning: in the working copy of 'vinod.txt', LF will be replaced by CRLF the next time Git touches it
+
+				 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+				 $ git commit -m "adding diff command"
+				 [master a072f9d] adding diff command
+				  1 file changed, 1 insertion(+), 1 deletion(-)
+
+				  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+				  $ git log
+				  commit a072f9d243e9fdef2c6dbafa90d53f3d2aafa392 (HEAD -> master)
+				  Author: vm21242124 <vm21242124@gmail.com>
+				  Date:   Thu Jul 20 19:06:39 2023 +0530
+
+				      adding diff command
+
+				      commit 5f1926bfe76fcd01e5f9fc386523d9715c201a7c
+				      Author: vm21242124 <vm21242124@gmail.com>
+				      Date:   Thu Jul 20 19:04:33 2023 +0530
+
+				          first
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					  $ git branch
+					  * master
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					  $ git branch develope
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					  $ git checkout develope
+					  Switched to branch 'develope'
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					  $ vi second.txt
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					  $ ls
+					  second.txt  vinod.txt
+
+					  vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					  $ git branch
+					  * develope
+					    master
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					    $ git checkout master
+					    Switched to branch 'master'
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					    $ ls
+					    second.txt  vinod.txt
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					    $ ls
+					    second.txt  vinod.txt
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					    $ git merge develope
+					    Already up to date.
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					    $ git checkout
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					    $ git checkout develope
+					    Switched to branch 'develope'
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					    $ ls
+					    second.txt  vinod.txt
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					    $ git add .
+					    warning: in the working copy of 'second.txt', LF will be replaced by CRLF the next time Git touches it
+
+					    vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					    $ git commit -m "second"
+					    [develope a61cc44] second
+					     1 file changed, 1 insertion(+)
+					      create mode 100644 second.txt
+
+					      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (develope)
+					      $ git checkout master
+					      Switched to branch 'master'
+
+					      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					      $ ls
+					      vinod.txt
+
+					      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					      $ ls
+					      vinod.txt
+
+					      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+					      $ git merge develope
+					      Updating a072f9d..a61cc44
+					      Fast-forward
+					       second.txt | 1 +
+					        1 file changed, 1 insertion(+)
+						 create mode 100644 second.txt
+
+						 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						 $ ls
+						 second.txt  vinod.txt
+
+						 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						 $ git branch
+						   develope
+						   * master
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ git branch -d develope
+						   Deleted branch develope (was a61cc44).
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ git branch
+						   * master
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ ls
+						   second.txt  vinod.txt
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ git branch feauture
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ vi navbar.txt
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ ls
+						   navbar.txt  second.txt  vinod.txt
+
+						   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+						   $ git status
+						   On branch master
+						   Untracked files:
+						     (use "git add <file>..." to include in what will be committed)
+						             navbar.txt
+
+							     nothing added to commit but untracked files present (use "git add" to track)
+
+							     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							     $ git add .
+							     warning: in the working copy of 'navbar.txt', LF will be replaced by CRLF the next time Git touches it
+
+							     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							     $ rm -i navbar.txt
+							     rm: remove regular file 'navbar.txt'? y
+
+							     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							     $ ls
+							     second.txt  vinod.txt
+
+							     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							     $ git checkout feature
+							     error: pathspec 'feature' did not match any file(s) known to git
+
+							     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							     $ git branch
+							       feauture
+							       * master
+
+							       vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+							       $ git checkout feauture
+							       Switched to branch 'feauture'
+
+							       vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+							       $ vi navbar.txt
+
+							       vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+							       $ git commit -m "navbar"
+							       [feauture 35251e2] navbar
+							        1 file changed, 3 insertions(+)
+								 create mode 100644 navbar.txt
+
+								 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+								 $ ls
+								 navbar.txt  second.txt  vinod.txt
+
+								 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+								 $ git checkout master
+								 error: Your local changes to the following files would be overwritten by checkout:
+								         navbar.txt
+									 Please commit your changes or stash them before you switch branches.
+									 Aborting
+
+									 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+									 $ git commit
+									 On branch feauture
+									 Changes not staged for commit:
+									   (use "git add <file>..." to update what will be committed)
+									     (use "git restore <file>..." to discard changes in working directory)
+									             modified:   navbar.txt
+
+										     no changes added to commit (use "git add" and/or "git commit -a")
+
+										     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+										     $ git add .
+										     warning: in the working copy of 'navbar.txt', LF will be replaced by CRLF the next time Git touches it
+
+										     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+										     $ git commit "navbar"
+										     error: pathspec 'navbar' did not match any file(s) known to git
+
+										     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+										     $ git commit "navbawewer"
+										     error: pathspec 'navbawewer' did not match any file(s) known to git
+
+										     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+										     $ git commit -m "navbawewer"
+										     [feauture 43e78c7] navbawewer
+										      1 file changed, 1 insertion(+), 2 deletions(-)
+
+										      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (feauture)
+										      $ git checkout master
+										      Switched to branch 'master'
+
+										      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+										      $ ls
+										      second.txt  vinod.txt
+
+										      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+										      $ git merge feauture
+										      Updating a61cc44..43e78c7
+										      Fast-forward
+										       navbar.txt | 2 ++
+										        1 file changed, 2 insertions(+)
+											 create mode 100644 navbar.txt
+
+											 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+											 $ git branch -d feauture
+											 Deleted branch feauture (was 43e78c7).
+
+											 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+											 $ ls
+											 navbar.txt  second.txt  vinod.txt
+
+											 vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+											 $ git log
+											 commit 43e78c77fc255465747a6c1e64f71b11fcbee80c (HEAD -> master)
+											 Author: vm21242124 <vm21242124@gmail.com>
+											 Date:   Thu Jul 20 19:18:42 2023 +0530
+
+											     navbawewer
+
+											     commit 35251e228a8173afe50c4376403bd002e4e494e6
+											     Author: vm21242124 <vm21242124@gmail.com>
+											     Date:   Thu Jul 20 19:17:28 2023 +0530
+
+											         navbar
+
+												 commit a61cc44bfe1ca34c4367abe9c4e7f9bf9306adc7
+												 Author: vm21242124 <vm21242124@gmail.com>
+												 Date:   Thu Jul 20 19:09:48 2023 +0530
+
+												     second
+
+												     commit a072f9d243e9fdef2c6dbafa90d53f3d2aafa392
+												     Author: vm21242124 <vm21242124@gmail.com>
+												     Date:   Thu Jul 20 19:06:39 2023 +0530
+
+												         adding diff command
+
+													 commit 5f1926bfe76fcd01e5f9fc386523d9715c201a7c
+													 Author: vm21242124 <vm21242124@gmail.com>
+													 Date:   Thu Jul 20 19:04:33 2023 +0530
+
+													     first
+
+													     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+													     $ git push -u origin master
+													     fatal: unable to access 'https://github.com/vm21242124/git-practice.git/': OpenSSL SSL_connect: Connection was reset in connection to github.com:443
+
+													     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+													     $
+
+													     vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+													     $ git push -u origin master
+													     Enumerating objects: 15, done.
+													     Counting objects: 100% (15/15), done.
+													     Delta compression using up to 4 threads
+													     Compressing objects: 100% (9/9), done.
+													     Writing objects: 100% (15/15), 1.34 KiB | 229.00 KiB/s, done.
+													     Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+													     To https://github.com/vm21242124/git-practice.git
+													      * [new branch]      master -> master
+													      branch 'master' set up to track 'origin/master'.
+
+													      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+													      $ git pull
+													      remote: Enumerating objects: 5, done.
+													      remote: Counting objects: 100% (5/5), done.
+													      remote: Compressing objects: 100% (3/3), done.
+													      remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+													      Unpacking objects: 100% (3/3), 707 bytes | 22.00 KiB/s, done.
+													      From https://github.com/vm21242124/git-practice
+													         43e78c7..77d5f4d  master     -> origin/master
+														 Updating 43e78c7..77d5f4d
+														 Fast-forward
+														  vinod.txt | 1 +
+														   1 file changed, 1 insertion(+)
+
+														   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														   $ vi vinod.txt
+
+														   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														   $ vi vinod.txt
+
+														   vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														   $ git fetch
+														   remote: Enumerating objects: 5, done.
+														   remote: Counting objects: 100% (5/5), done.
+														   remote: Compressing objects: 100% (3/3), done.
+														   remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+														   Unpacking objects: 100% (3/3), 767 bytes | 24.00 KiB/s, done.
+														   From https://github.com/vm21242124/git-practice
+														      77d5f4d..c863aba  master     -> origin/master
+
+														      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														      $ ls
+														      navbar.txt  second.txt  vinod.txt
+
+														      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														      $ vi vinod.txt
+
+														      vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+														      $ git merge
+														      Updating 77d5f4d..c863aba
+														      Fast-forward
+														       vinod.txt | 2 ++
+														        1 file changed, 2 insertions(+)
+
+															vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+															$ vi vinod.txt
+
+															vinod mali@INBook_X1 MINGW64 ~/Desktop/git practie (master)
+															$
+
