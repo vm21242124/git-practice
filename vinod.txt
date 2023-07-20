@@ -1,3 +1,5 @@
 this is for master branch
 the diff is used to check the changes in staging area
 edited by vinod mali on remote repo
+git pull is used to directly download the changes
+git fetch is used to check the change in remote repo and git merge is used to get all the changes form remote to local
